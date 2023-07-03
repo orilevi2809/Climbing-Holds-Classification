@@ -7,6 +7,8 @@
 - [Prerequisites](#section-2)
 - [Files in the repository](#section-3)
 - [Running Instructions](#section-4)
+- [Results](#section-5)
+
 
 ## Background  <a name="background"></a>
 our project is to develop a segmentation and classification system for climbing holds in a climbing wall. We aim to accurately classify climbing holds into their respective labels, including crimp, pocket, jug, pinch, and sloper. Additionally, we aim to provide precise instance segmentation masks for each climbing hold, enabling a detailed understanding of their spatial distribution on the climbing wall. By achieving high accuracy in both classification and segmentation, we aim to enhance the analysis of climbing holds and provide valuable insights for climbers, route setters, and training programs. 
@@ -51,12 +53,34 @@ To install Torch and torchvision, please visit the official [PyTorch website](ht
 ## Files in the repository
 | File name     | Purpose                                          |
 |---------------|--------------------------------------------------|
-| mobileNet.py  | Load the data, train our network, and save our trained model |
+|ClassifyImg.jpeg|Image used for classification of running holds|
+|hold_classifier_MobileNet.pth| Trained model for classifying climbing holds |
+|classify_holds_MobileNet.py  | Load the data, train our network, and save our trained model |
 | main.py       | Get the image and classify the climbing holds with the saved model |
 
 
 <a name="section-4"></a>
 ## Running Instructions
+
+### Training the Model
+
+To train our model, run the following command:
+```shell
+python classify_holds_MobileNet.py
+```
+This script will load the necessary data, train the network, and save the trained model (hold_classifier_MobileNet.pth).
+
+### Running the Classification
+```
+python main.py <ImgPath>
+```
+
+Replace <ImgPath> with the path to the image you want to classify. 
+For example, you can use the provided image ClassifyImg.jpeg by running the following command:
+```
+python main.py ./ClassifyImg.jpeg
+```
+
 
 <a name="section-5"></a>
 ## Results
