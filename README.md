@@ -49,6 +49,9 @@ For the installation guide of CUDA, you can visit the following link:
 
 To install Torch and torchvision, please visit the official [PyTorch website](https://pytorch.org/) for the appropriate installation command.
 
+Can you get access to the data from the Google Drive provided below:
+https://drive.google.com/drive/folders/1ednd8uhKE7M2kD1zZ72gwoCsMWM8T4Ed?usp=drive_link
+
 <a name="section-3"></a>
 ## Files in the repository
 | File name     | Purpose                                          |
